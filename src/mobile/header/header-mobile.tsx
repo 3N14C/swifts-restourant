@@ -26,7 +26,7 @@ export const MobileHeader: FC<IProps> = () => {
   );
 
   const handleOpen = () => {
-    api.start({ to: { opacity: 1, x: 0 }, loop: true });
+    api.start({ to: { opacity: 1, x: 0 } });
     apiBg.start({ to: { opacity: 100, background: "rgba(0, 0, 0, 0.5)" } });
     setOpen(true);
   };
@@ -34,7 +34,6 @@ export const MobileHeader: FC<IProps> = () => {
   const handleClose = () => {
     api.start({
       to: { opacity: 0, x: -100 },
-      loop: true,
       onRest: () => setOpen(false),
     });
     apiBg.start({ to: { opacity: 0, background: "transparent" } });
