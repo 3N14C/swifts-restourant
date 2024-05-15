@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1.1514190435409544, 0, 0, 1.1499340534210205, -363.3441799532188, -241.78534115690988)" style="">
+    <rect x="-462.139" width="132.937" height="426.888" style="stroke-opacity: 0.71; stroke-width: 2.68083px; fill: rgb(89, 62, 44); stroke: rgb(139, 96, 80);" y="214.5" rx="16" ry="16" transform="matrix(-1, 0, 0, 1, 0, 0)"/>
+    <rect x="-379.959" width="50.664" height="426.977" style="stroke-opacity: 0.71; stroke-width: 2.68083px; stroke: rgb(139, 96, 80); fill: rgb(81, 46, 16);" y="214.508" rx="15.386" ry="15.386" transform="matrix(-1, 0, 0, 1, 0, 0)"/>
+    <rect x="329.68" width="31.632" height="426.073" style="stroke-opacity: 0.71; stroke-width: 2.68083px; stroke: rgb(139, 96, 80); fill: rgb(151, 103, 71);" y="214.932" rx="13.333" ry="13.333"/>
+    <rect style="stroke: rgb(0, 0, 0); fill: rgb(69, 39, 19);" x="652.112" y="392.218" width="58.594" height="82.251" rx="12.565" ry="12.565"/>
+    <rect style="transform-box: fill-box; transform-origin: 50% 50%; stroke-opacity: 0.7; stroke-width: 2.72551px; fill: rgb(151, 103, 71); stroke: rgb(139, 96, 80);" x="245.086" y="260.446" width="21.364" height="59.612" rx="5.863" ry="5.863" transform="matrix(0, -1, 1, 0, 425.083499, 180.061627)"/>
+    <rect style="transform-origin: 255.768px 290.252px; stroke-opacity: 0.7; stroke-width: 2.72551px; fill: rgb(151, 103, 71); stroke: rgb(139, 96, 80);" x="245.086" y="260.446" width="21.364" height="59.612" rx="5.863" ry="5.863" transform="matrix(0, -1, 1, 0, 425.529864, 108.130117)"/>
+    <rect style="transform-origin: 692.015px 433.872px; stroke-width: 1.34041px; stroke-opacity: 0.7; fill: rgb(81, 46, 16); stroke: rgb(139, 96, 80);" x="683.596" y="410.871" width="16.837" height="46.004" rx="3.836" ry="3.836"/>
+    <rect style="transform-origin: 707.621px 434.292px; stroke-opacity: 0.71; stroke-width: 2.68083px; fill: rgb(151, 103, 71); stroke: rgb(139, 96, 80);" x="696.538" y="396.518" width="22.165" height="75.55" rx="5.863" ry="5.863"/>
+    <rect x="433.098" width="227.112" height="310.444" style="stroke-opacity: 0.71; stroke-width: 2.68083px; fill: rgb(140, 113, 95); stroke: rgb(139, 96, 80);" y="275.164" rx="13.333" ry="13.333"/>
+  </g>
+</svg>
