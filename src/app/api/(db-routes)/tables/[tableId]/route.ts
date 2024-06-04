@@ -1,6 +1,8 @@
 import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export const PATCH = async (req: Request, ctx: any) => {
   const { status } = await req.json();
   const { params } = ctx;

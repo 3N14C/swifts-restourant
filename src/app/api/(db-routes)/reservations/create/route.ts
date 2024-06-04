@@ -2,6 +2,8 @@ import prisma from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export const POST = async (req: Request) => {
   const { date, time, tableId, userId } = await req.json();
 
