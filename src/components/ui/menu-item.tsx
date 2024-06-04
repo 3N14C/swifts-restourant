@@ -45,7 +45,6 @@ export const MenuItem: FC<IProps> = ({ product, idx }) => {
           >
             {product?.name}
           </p>
-          <p className="text-gray-400">{product?.description}</p>
         </div>
 
         <p className={cn(mark.className, "text-[#6f4e37] text-3xl")}>

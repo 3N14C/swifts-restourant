@@ -21,7 +21,6 @@ export const Reservation: FC<IProps> = ({}) => {
     queryFn: async () => {
       return await getAllTables();
     },
-    // refetchInterval: 2000,
   });
 
   return (
