@@ -12,9 +12,9 @@ export const navbar: INavbar[] = [
   },
 
   {
-    id: "about",
-    name: "О нас",
-    href: "/about",
+    id: "menu",
+    name: "наше меню",
+    href: "#menu",
   },
 
   {
@@ -23,15 +23,15 @@ export const navbar: INavbar[] = [
     href: "/reservation",
   },
 
-  {
-    id: "menu",
-    name: "Меню",
-    href: "/menu",
-  },
+  // {
+  //   id: "menu",
+  //   name: "Меню",
+  //   href: "/menu",
+  // },
 
-  {
-    id: "blog",
-    name: "Блог",
-    href: "/blog",
-  },
+  // {
+  //   id: "blog",
+  //   name: "Блог",
+  //   href: "/blog",
+  // },
 ];

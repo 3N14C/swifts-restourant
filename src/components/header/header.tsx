@@ -26,8 +26,6 @@ export const Header: FC<IProps> = ({ absolute = false, textColor }) => {
       })}
     >
       <animated.div
-        // ref={ref}
-        // style={spring}
         className={cn("lg:flex items-center gap-40", textColor, {
           "text-white": !textColor,
         })}

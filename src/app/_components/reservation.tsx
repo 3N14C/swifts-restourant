@@ -17,10 +17,11 @@ export const Reservation: FC<IProps> = ({}) => {
   const { open, setOpen, table } = useModal();
 
   const { data: tables, isLoading } = useQuery({
-    queryKey: ["tables"],
+    queryKey: ["tables", open],
     queryFn: async () => {
       return await getAllTables();
     },
+    // refetchInterval: 2000,
   });
 
   return (

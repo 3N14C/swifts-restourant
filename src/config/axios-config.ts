@@ -1,7 +1,10 @@
 import axios from "axios";
 
 export const axiosInstanse = axios.create({
-  baseURL: "https://swifts-restourant.vercel.app/api",
+  baseURL:
+    process.env.NODE_ENV === "production"
+      ? "https://swifts-restourant.vercel.app/api"
+      : "http://localhost:5700/api",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",

@@ -15,7 +15,7 @@ export const Navbar: FC<IProps> = ({ textColor }) => {
   const [hover, setHover] = useState<string | null>(null);
 
   return (
-    <div className="lg:flex items-center gap-20 col-span-4">
+    <div className="lg:flex items-center gap-20 lg:ml-36 col-span-4">
       {navbar.map((item) => (
         <div
           key={item.id}

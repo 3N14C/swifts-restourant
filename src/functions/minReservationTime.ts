@@ -46,7 +46,7 @@ export const getMinReservationTime = (
 ) => {
   const reservationsForSelectedDate = table?.reservation.filter(
     (reservation) =>
-      reservation.reservationDate === selectedDate.toLocaleDateString()
+      reservation.reservationDate === selectedDate?.toLocaleDateString()
   );
 
   if (

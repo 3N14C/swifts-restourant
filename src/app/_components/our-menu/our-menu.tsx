@@ -14,23 +14,24 @@ import { useQueryState } from "nuqs";
 import { TitleWithLines } from "@/components/ui/title-with-lines";
 
 export const OurMenu: FC = () => {
-  const [categoryId] = useQueryState("categoryId", {
+  const [categoryId, setCategoryId] = useQueryState("categoryId", {
     defaultValue: "desserts",
   });
 
   const { data: category, refetch } = useQuery({
-    queryKey: ["category-by-id"],
+    queryKey: ["category-by-id", categoryId],
     queryFn: async () => {
       return await getCategoryById(categoryId);
     },
   });
 
   useEffect(() => {
-    refetch();
-  }, [categoryId, refetch]);
+    if (!category) return;
+    setCategoryId(category?.id);
+  }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div id="menu" className="flex flex-col justify-center items-center">
       <div className="flex flex-col gap-5 items-center">
         <div className="relative">
           <TitleWithLines title="наше меню" />

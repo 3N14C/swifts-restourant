@@ -6,7 +6,7 @@ import { Button } from "@/app/_components/ui/button";
 import { cn } from "@/lib/utils";
 import { animated, useSpring } from "@react-spring/web";
 import { useQuery } from "@tanstack/react-query";
-import { Loader2, LogOut, ShoppingCart, User } from "lucide-react";
+import { Loader2, LogOut, ShoppingCart, User, UserCogIcon } from "lucide-react";
 import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { FC, useState } from "react";
@@ -62,13 +62,23 @@ export const Tools: FC = () => {
         <animated.div
           style={spring}
           className={cn(
-            "absolute -z-40 bg-white/50 border border-zinc-300 rounded-lg w-[150px] h-[150px] right-1/4 top-5",
+            "absolute -z-40 bg-white/50 border border-zinc-300 rounded-lg w-[200px] h-[90px] right-1/4 top-5",
             {
               "z-50": open,
             }
           )}
         >
-          <div className="">
+          <div className="flex flex-col gap-5">
+            {user?.role === "ADMIN" && (
+              <Link
+                href={"/admin-page"}
+                className="flex items-center gap-3 cursor-pointer z-60"
+              >
+                <UserCogIcon className="text-[#6f4e37]" />
+                <p>Админ-панель</p>
+              </Link>
+            )}
+
             <div
               className="flex items-center gap-3 cursor-pointer"
               onClick={async () => await logout()}
@@ -78,10 +88,6 @@ export const Tools: FC = () => {
             </div>
           </div>
         </animated.div>
-      </div>
-
-      <div className="w-full">
-        <ShoppingCart />
       </div>
     </div>
   );
