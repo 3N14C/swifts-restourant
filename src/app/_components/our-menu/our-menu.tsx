@@ -2,7 +2,7 @@
 
 import { DotLines } from "@/components/ui/dot-line";
 import { Title } from "@/components/ui/title";
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { CategorySlider } from "./category-slider";
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -17,18 +17,19 @@ export const OurMenu: FC = () => {
   const [categoryId, setCategoryId] = useQueryState("categoryId", {
     defaultValue: "desserts",
   });
+  const [categoryIdState, setCategoryIdState] = useState<string>("clx0cee5b0000rzax2sj69ccd");
 
   const { data: category, refetch } = useQuery({
-    queryKey: ["category-by-id", categoryId],
+    queryKey: ["category-by-id", categoryIdState],
     queryFn: async () => {
-      return await getCategoryById(categoryId);
+      return await getCategoryById(categoryIdState);
     },
   });
 
-  useEffect(() => {
-    if (!category) return;
-    setCategoryId(category?.id);
-  }, []);
+  // useEffect(() => {
+  //   if (!category) return;
+  //   setCategoryId(category?.id);
+  // }, []);
 
   return (
     <div id="menu" className="flex flex-col justify-center items-center">
