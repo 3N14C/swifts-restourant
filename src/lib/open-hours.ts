@@ -2,7 +2,7 @@ export const openHours = [
   {
     id: "monday",
     name: "Понедельник",
-    time: "10:00 - 22:00",
+    time: "Закрыто",
   },
 
   {
@@ -38,6 +38,6 @@ export const openHours = [
   {
     id: "sunday",
     name: "Воскресенье",
-    time: "закрыто",
+    time: "10:00 - 22:00",
   },
 ];

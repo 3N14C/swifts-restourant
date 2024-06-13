@@ -9,3 +9,13 @@ export type TTableWithReservation = Prisma.TableGetPayload<{
     };
   };
 }>;
+
+export type TableWithUserReservation = Prisma.TableGetPayload<{
+  include: {
+    reservation: {
+      include: {
+        user: true
+      }
+    }
+  }
+}>

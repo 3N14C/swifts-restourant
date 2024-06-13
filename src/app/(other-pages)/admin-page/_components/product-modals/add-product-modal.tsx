@@ -49,7 +49,10 @@ export const AddProductModal: FC<IProps> = ({ open, setOpen }) => {
 
   const { mutateAsync, isPending } = useMutation({
     mutationFn: ProductService.create,
-    onSuccess: () => toast.success("Продукт добавлен в список меню"),
+    onSuccess: () => {
+      toast.success("Продукт добавлен в список меню");
+      setOpen(false);
+    },
   });
 
   const handleOnSubmit = async (data: z.infer<typeof schema>) => {
@@ -58,7 +61,7 @@ export const AddProductModal: FC<IProps> = ({ open, setOpen }) => {
     await mutateAsync({
       ...data,
       categoryId,
-      price: +data.price
+      price: +data.price,
     });
   };
 
@@ -66,7 +69,7 @@ export const AddProductModal: FC<IProps> = ({ open, setOpen }) => {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Добавить продукт в список меню</DialogTitle>
+          <DialogTitle>Добавить блюдо в список меню</DialogTitle>
         </DialogHeader>
 
         <div className="flex items-start gap-5">
@@ -106,26 +109,24 @@ export const AddProductModal: FC<IProps> = ({ open, setOpen }) => {
             </div>
 
             <Button disabled={isPending} type="submit">
-              {isPending ? <Loader2 /> : "Добавить"}
+              {isPending ? <Loader2 className="animate-spin" /> : "Добавить"}
             </Button>
           </form>
 
-          <div className="">
+          <div className="grid grid-cols-3 items-center gap-3">
             {categories?.map((category) => (
-              <div key={category.id} className="">
-                <Image
-                  src={category.img}
-                  alt={category.name}
-                  width={1000}
-                  height={1000}
-                  className={cn(
-                    "w-[100px] h-[100px] rounded-full cursor-pointer",
-                    {
-                      "border-b border-[#8b705e]": categoryId === category.id,
-                    }
-                  )}
-                  onClick={() => setCategoryId(category.id)}
-                />
+              <div
+                key={category.id}
+                className={cn(
+                  "border border-[#E5E7EB] rounded-lg px-3 py-2 text-center transition duration-300 cursor-pointer",
+                  {
+                    "bg-primary text-white": categoryId === category.id,
+                    'hover:bg-[#E5E7EB]': categoryId !== category.id
+                  }
+                )}
+                onClick={() => setCategoryId(category.id)}
+              >
+                <p className="">{category.name}</p>
               </div>
             ))}
           </div>
