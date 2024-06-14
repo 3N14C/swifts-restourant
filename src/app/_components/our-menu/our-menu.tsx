@@ -19,7 +19,7 @@ export const OurMenu: FC = () => {
   });
 
   const [categoryIdState, setCategoryIdState] = useState<string>(
-    "clxeniit80001deqj2nhikjib"
+    "clxenf1ha0000nadcipkxzeer"
   );
   
   const { data: category, refetch } = useQuery({
