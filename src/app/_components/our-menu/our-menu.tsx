@@ -25,7 +25,7 @@ export const OurMenu: FC = () => {
   const { data: category, refetch } = useQuery({
     queryKey: ["category-by-id", categoryId],
     queryFn: async () => {
-      return await getCategoryById(categoryIdState);
+      return await getCategoryById(categoryId);
     },
   });
   
