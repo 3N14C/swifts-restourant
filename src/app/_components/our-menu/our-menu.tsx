@@ -17,15 +17,18 @@ export const OurMenu: FC = () => {
   const [categoryId, setCategoryId] = useQueryState("categoryId", {
     defaultValue: "desserts",
   });
-  const [categoryIdState, setCategoryIdState] = useState<string>("clx0cee5b0000rzax2sj69ccd");
 
+  const [categoryIdState, setCategoryIdState] = useState<string>(
+    "clxeniit80001deqj2nhikjib"
+  );
+  
   const { data: category, refetch } = useQuery({
-    queryKey: ["category-by-id", categoryIdState],
+    queryKey: ["category-by-id", categoryId],
     queryFn: async () => {
       return await getCategoryById(categoryIdState);
     },
   });
-
+  
   // useEffect(() => {
   //   if (!category) return;
   //   setCategoryId(category?.id);
