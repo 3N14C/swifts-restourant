@@ -19,14 +19,14 @@ export const StatisticCard: FC<IProps> = ({ number, img, name }) => {
 
   return (
     <animated.div className="">
-      <CountUp end={number} duration={5}>
-        {({ countUpRef }) => (
-          <div className="flex flex-col gap-3 items-center">
+      <div className="flex flex-col gap-3 items-center">
             <div className={cn(mark.className, "flex items-center")}>
               <span
                 className={cn("text-6xl font-bold text-[#6f4e37]")}
-                ref={countUpRef}
-              />
+                // ref={countUpRef}
+              >
+                {number}
+              </span>
               <p className="text-2xl">/{name}</p>
             </div>
 
@@ -40,8 +40,6 @@ export const StatisticCard: FC<IProps> = ({ number, img, name }) => {
               className="w-40 h-40"
             />
           </div>
-        )}
-      </CountUp>
     </animated.div>
   );
 };

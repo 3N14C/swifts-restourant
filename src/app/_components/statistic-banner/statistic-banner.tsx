@@ -20,7 +20,7 @@ export const StatisticBanner: FC = () => {
 
   return (
     <div className="grid lg:grid-cols-4 items-center lg:gap-0">
-      {/* <StatisticCard name="блюд" number={103} img="/img/dishes-png.png" />
+      <StatisticCard name="блюд" number={103} img="/img/dishes-png.png" />
       <StatisticCard
         name="посетителей"
         number={2389}
@@ -31,16 +31,16 @@ export const StatisticBanner: FC = () => {
         name="часов работы"
         number={2589}
         img="/img/dishes-png.png"
-      /> */}
+      />
 
-      <CountUp end={2389} duration={5}>
+      {/* <CountUp end={2389} duration={5}>
         {({ countUpRef }) => (
           <div className="flex flex-col gap-3 items-center">
             <div className={cn(mark.className, "flex items-center")}>
               <span
                 className={cn("text-6xl font-bold text-[#6f4e37]")}
-                ref={countUpRef}
-              />
+                
+              >2389</span>
               <p className="text-2xl">fdsf</p>
             </div>
 
@@ -55,7 +55,7 @@ export const StatisticBanner: FC = () => {
             />
           </div>
         )}
-      </CountUp>
+      </CountUp> */}
     </div>
   );
 };
