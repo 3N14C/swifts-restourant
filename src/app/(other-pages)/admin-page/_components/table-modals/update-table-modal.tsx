@@ -150,7 +150,7 @@ export const UpdateTableModal: FC<IProps> = ({ open, setOpen }) => {
             <div className="flex items-center gap-4">
               <p>Брони на столик:</p>
               <div className="flex items-center text-sm gap-2">
-                <Checkbox onCheckedChange={setIsChecked} checked={isChecked} />
+                <Checkbox onClick={() => setIsChecked(!isChecked)} checked={isChecked} />
                 <p>Сегодня</p>
               </div>
             </div>
