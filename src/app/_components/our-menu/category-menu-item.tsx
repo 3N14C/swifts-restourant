@@ -21,13 +21,13 @@ export const CategoryMenuItem: FC<IProps> = ({ product }) => {
         className="w-20 h-20"
       />
 
-      <p className="text-black text-lg max-w-[300px] text-center">
+      <p className="text-black text-xl max-w-[300px] text-center">
         {product.name}
       </p>
       <p className="text-[#6f4e37] text-3xl">
-        {product.price.toLocaleString("en-US", {
+        {product.price.toLocaleString("ru-RU", {
           style: "currency",
-          currency: "USD",
+          currency: "RUB",
           maximumFractionDigits: 1,
         })}
       </p>

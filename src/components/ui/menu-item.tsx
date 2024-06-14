@@ -48,9 +48,9 @@ export const MenuItem: FC<IProps> = ({ product, idx }) => {
         </div>
 
         <p className={cn(mark.className, "text-[#6f4e37] text-3xl")}>
-          {product?.price.toLocaleString("en-US", {
+          {product?.price.toLocaleString("ru-RU", {
             style: "currency",
-            currency: "USD",
+            currency: "RUB",
             maximumFractionDigits: 1,
           })}
         </p>
