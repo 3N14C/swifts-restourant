@@ -85,7 +85,8 @@ export const ReservationCard: FC<IProps> = ({ table, idx }) => {
           <div className="flex items-center justify-between">
             <div className="">
               <p className="text-[#8b705e] font-semibold text-lg">
-                №{table.tableNumber} <span className="text-[#8b705e]">стол</span>
+                №{table.tableNumber}{" "}
+                <span className="text-[#8b705e]">стол</span>
               </p>
             </div>
 
@@ -124,9 +125,6 @@ export const ReservationCard: FC<IProps> = ({ table, idx }) => {
             <Button variant="solid" onClick={handleOpenModal}>
               Забронировать
             </Button>
-            <button className="bg-white text-[#8b705e] font-semibold px-4 py-2 rounded-lg border-2 border-[#8b705e] w-full hover:bg-[#f3f3f3] transition duration-300">
-              Позвонить нам
-            </button>
           </div>
         )}
 
@@ -141,9 +139,6 @@ export const ReservationCard: FC<IProps> = ({ table, idx }) => {
               onClick={handleOpenModal}
             >
               Забронировать
-            </button>
-            <button className="bg-white text-[#8b705e] font-semibold px-4 py-2 rounded-lg border-2 border-[#8b705e] w-full hover:bg-[#f3f3f3] transition duration-300">
-              Позвонить нам
             </button>
           </div>
         )}
