@@ -104,7 +104,7 @@ export const Footer: FC = () => {
 
             <div className="h-[1px] w-full bg-white/50" />
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-center gap-20">
               <SocialCard icon="MapPin" text={"г. Москва, ул. Ленина, 1"} />
               <SocialCard icon="Phone" text={["(617)-276", "(502)-102"]} />
               <SocialCard icon="Mail" text="example@mail.ru" />

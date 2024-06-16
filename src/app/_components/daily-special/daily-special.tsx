@@ -36,10 +36,8 @@ export const DailySpecial: FC<IProps> = ({}) => {
     isPending,
     refetch,
   } = useQuery({
-    queryKey: ["menu-prodcuts"],
-    queryFn: async () => {
-      return await getProducts(page, "3");
-    },
+    queryKey: ["menu-prodcuts", page],
+    queryFn: () => getProducts(page, "3")
   });
 
   useEffect(() => {
