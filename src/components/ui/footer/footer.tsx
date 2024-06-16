@@ -21,12 +21,12 @@ const MobileFooter: FC = () => {
         <div className="px-5 py-3 flex flex-col items-start gap-5">
           <Logo textColor="text-white" />
 
-          <p className="text-white/50">
+          {/* <p className="text-white/50">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia,
             perferendis et quam cum doloribus cumque eligendi culpa debitis
             nostrum ipsa consequuntur quidem ad quod repellat cupiditate. Et,
             hic magnam.
-          </p>
+          </p> */}
 
           <div className="h-[1px] w-full bg-white/50" />
 
@@ -47,7 +47,7 @@ const MobileFooter: FC = () => {
               color="white"
               size={20}
               icon="Mail"
-              text="LQ9i0@example.com"
+              text="example@mail.ru"
             />
           </div>
         </div>
@@ -92,22 +92,22 @@ export const Footer: FC = () => {
           <div className="lg:max-w-[800px] flex flex-col gap-10">
             <div className="flex items-center justify-between">
               <Logo />
-              <div className="">Social Media</div>
+              {/* <div className="">Social Media</div> */}
             </div>
 
-            <p className="text-white/50">
+            {/* <p className="text-white/50">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. A
               officia, perferendis et quam cum doloribus cumque eligendi culpa
               debitis nostrum ipsa consequuntur quidem ad quod repellat
               cupiditate. Et, hic magnam.
-            </p>
+            </p> */}
 
             <div className="h-[1px] w-full bg-white/50" />
 
             <div className="flex items-center justify-between">
               <SocialCard icon="MapPin" text={"г. Москва, ул. Ленина, 1"} />
               <SocialCard icon="Phone" text={["(617)-276", "(502)-102"]} />
-              <SocialCard icon="Mail" text="LQ9i0@example.com" />
+              <SocialCard icon="Mail" text="example@mail.ru" />
             </div>
           </div>
 
