@@ -8,13 +8,13 @@ export const navbar: INavbar[] = [
   {
     id: "home",
     name: "Главная",
-    href: "/",
+    href: "/?categoryId=clxendwbk0000x9qsngool13c",
   },
 
   {
     id: "menu",
     name: "наше меню",
-    href: "/#menu",
+    href: "#menu",
   },
 
   {
@@ -22,16 +22,4 @@ export const navbar: INavbar[] = [
     name: "Бронирование",
     href: "/reservation",
   },
-
-  // {
-  //   id: "menu",
-  //   name: "Меню",
-  //   href: "/menu",
-  // },
-
-  // {
-  //   id: "blog",
-  //   name: "Блог",
-  //   href: "/blog",
-  // },
 ];
