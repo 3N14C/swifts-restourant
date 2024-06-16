@@ -28,7 +28,7 @@ export const MenuItem: FC<IProps> = ({ product, idx }) => {
   return (
     <animated.div ref={ref} style={spring} className="flex items-center gap-5">
       <Image
-        src={"/img/product-decorate.jpg"}
+        src={product.img}
         alt="product-decorate"
         width={1000}
         height={1000}
