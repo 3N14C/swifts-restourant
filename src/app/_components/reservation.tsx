@@ -8,13 +8,17 @@ import { TitleWithLines } from "@/components/ui/title-with-lines";
 import { cn } from "@/lib/utils";
 import { useModal } from "@/store/modal-state-store";
 import { useQuery } from "@tanstack/react-query";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { ReservationCard } from "./ui/reservation-place-card";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight, ArrowUp } from "lucide-react";
+import { ModalTableMap } from "@/components/ui/modal/modal-table-map";
 
 interface IProps {}
 
 export const Reservation: FC<IProps> = ({}) => {
   const { open, setOpen, table } = useModal();
+  const [openMap, setOpenMap] = useState<boolean>(false);
 
   const { data: tables, isLoading } = useQuery({
     queryKey: ["tables", open],
@@ -31,9 +35,21 @@ export const Reservation: FC<IProps> = ({}) => {
         tableId={table?.id!}
         table={table!}
       />
+      <ModalTableMap open={openMap} setOpen={setOpenMap} />
       <div className="relative flex flex-col justify-center items-center gap-5 w-full">
         <TitleWithLines title="записная книга" />
+        <div className=""></div>
         <Title title="забронируйте столик" color="text-[#29272e]" />
+        <div className="flex flex-col items-center">
+          <Button
+            variant={"link"}
+            className="text-xl"
+            onClick={() => setOpenMap(true)}
+          >
+            Карта столиков
+          </Button>
+          <ArrowUp className="animate-bounce opacity-50" />
+        </div>
       </div>
       <div
         className={cn(

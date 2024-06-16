@@ -24,7 +24,8 @@ interface IProps {
 export const AddTableModal: FC<IProps> = ({ open, setOpen }) => {
   const schema = z.object({
     countGuests: z.string().min(1, "Неверное количество гостей"),
-    img: z.string().min(1, "Неверная ссылка на изображение"),
+    // img: z.string().min(1, "Неверная ссылка на изображение"),
+    tableNumber: z.string().min(1, "Неверный номер столика"),
   });
 
   const {
@@ -44,6 +45,7 @@ export const AddTableModal: FC<IProps> = ({ open, setOpen }) => {
     await mutateAsync({
       ...data,
       countGuests: +data.countGuests,
+      img: ''
     });
   };
 
@@ -54,17 +56,35 @@ export const AddTableModal: FC<IProps> = ({ open, setOpen }) => {
           <DialogTitle>Доабвить столик</DialogTitle>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit(handleOnSubmit)} className="flex flex-col gap-3">
+        <form
+          onSubmit={handleSubmit(handleOnSubmit)}
+          className="flex flex-col gap-3"
+        >
           <div className="">
-            <Input className="border-primary" {...register("countGuests")} placeholder="кол-во гостей" />
+            <Input
+              className="border-primary"
+              {...register("countGuests")}
+              placeholder="кол-во гостей"
+            />
             {errors.countGuests && (
               <p className="text-red-500">{errors.countGuests.message}</p>
             )}
           </div>
 
-          <div className="">
+          {/* <div className="">
             <Input className="border-primary" {...register("img")} placeholder="Ссылка на изображение" />
             {errors.img && <p className="text-red-500">{errors.img.message}</p>}
+          </div> */}
+
+          <div className="">
+            <Input
+              className="border-primary"
+              {...register("tableNumber")}
+              placeholder="Введите номер столика"
+            />
+            {errors.tableNumber && (
+              <p className="text-red-500">{errors.tableNumber.message}</p>
+            )}
           </div>
 
           <Button type="submit" disabled={isPending} className="w-full">

@@ -40,7 +40,10 @@ export const TablesList: FC = () => {
       <UpdateTableModal open={updateTable} setOpen={setUpdateTable} />
       <div className="grid grid-cols-4 items-center">
         {tables?.map((table, idx) => (
-          <div key={table.id} className="flex items-center gap-4" onClick={() => setUpdateTable([true, table.id])}>
+          <div
+            key={table.id}
+            className="flex items-center gap-4 max-w-fit"
+          >
             <animated.div
               ref={ref}
               style={spring}
@@ -66,6 +69,7 @@ export const TablesList: FC = () => {
                       width={1000}
                       height={1000}
                       className="w-[150px] h-[150px] object-contain"
+                      onClick={() => setUpdateTable([true, table.id])}
                     />
                   </div>
 

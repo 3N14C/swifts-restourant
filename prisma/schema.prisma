@@ -50,7 +50,8 @@ model Table {
 
   status      TableEnum @default(open)
   countGuests Int
-  img         String
+  tableNumber String @default("1")
+  img         String?
 
   createdAt   DateTime      @default(now())
   reservation Reservation[]

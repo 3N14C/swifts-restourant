@@ -53,6 +53,7 @@ export const UpdateTableModal: FC<IProps> = ({ open, setOpen }) => {
 
   const schema = z.object({
     countGuests: z.string().min(1, "Неверное количество гостей"),
+    tableNumber: z.string().min(1, "Неверный номер столика"),
   });
 
   const {
@@ -63,6 +64,7 @@ export const UpdateTableModal: FC<IProps> = ({ open, setOpen }) => {
     resolver: zodResolver(schema),
     values: {
       countGuests: table?.countGuests.toString() ?? "",
+      tableNumber: table?.tableNumber.toString() ?? "",
     },
   });
 
@@ -121,6 +123,14 @@ export const UpdateTableModal: FC<IProps> = ({ open, setOpen }) => {
               <Input
                 {...register("countGuests")}
                 placeholder="Количество гостей"
+              />
+            </div>
+
+            <div className="">
+              <p className="text-sm">Номер столика</p>
+              <Input
+                {...register("tableNumber")}
+                placeholder="Номер столика"
               />
             </div>
 
