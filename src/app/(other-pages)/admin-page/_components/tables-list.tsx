@@ -76,7 +76,7 @@ export const TablesList: FC = () => {
                   <div className="flex items-center justify-between">
                     <div className="">
                       <p className="text-[#8b705e] font-semibold text-lg">
-                        №{idx} <span className="text-[#8b705e]">стол</span>
+                        №{table.tableNumber} <span className="text-[#8b705e]">стол</span>
                       </p>
                     </div>
 
